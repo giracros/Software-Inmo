@@ -86,7 +86,7 @@
                             </f:facet>
                             <h:commandLink action="#{tUsuariosController.prepareView}" value="#{bundle.ListTUsuariosViewLink}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{tUsuariosController.prepareEdit}" value="#{bundle.ListTUsuariosEditLink}"/>
+                            <h:commandLink action="#{tUsuariosController.prepareEdit}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTUsuariosEditLink}"/>
                             <h:outputText value=" "/>
                             <h:commandLink action="#{tUsuariosController.destroy}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTUsuariosDestroyLink}"/>
                         </h:column>

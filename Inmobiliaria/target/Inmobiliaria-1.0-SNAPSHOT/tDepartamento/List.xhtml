@@ -38,7 +38,7 @@
                             </f:facet>
                             <h:commandLink action="#{tDepartamentoController.prepareView}" value="#{bundle.ListTDepartamentoViewLink}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{tDepartamentoController.prepareEdit}" value="#{bundle.ListTDepartamentoEditLink}"/>
+                            <h:commandLink action="#{tDepartamentoController.prepareEdit}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTDepartamentoEditLink}"/>
                             <h:outputText value=" "/>
                             <h:commandLink action="#{tDepartamentoController.destroy}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTDepartamentoDestroyLink}"/>
                         </h:column>

@@ -44,7 +44,7 @@
                             </f:facet>
                             <h:commandLink action="#{tCiudadController.prepareView}" value="#{bundle.ListTCiudadViewLink}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{tCiudadController.prepareEdit}" value="#{bundle.ListTCiudadEditLink}"/>
+                            <h:commandLink action="#{tCiudadController.prepareEdit}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTCiudadEditLink}"/>
                             <h:outputText value=" "/>
                             <h:commandLink action="#{tCiudadController.destroy}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTCiudadDestroyLink}"/>
                         </h:column>

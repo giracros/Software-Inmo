@@ -10,19 +10,19 @@
         Bienvenido a nuestro portal aquì podra encontrar la informacion que necesita sobre el inmueble que usted esta buscando...
         <br />
         <br />
-        <h:link outcome="/tDepartamento/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Departamentos"/>
+        <h:link outcome="/tDepartamento/List" rendered="#{loginBean.perfil == 1 or loginBean.perfil == 2 }" value="Administracion de Departamentos"/>
         <br />
         <br />
-        <h:link outcome="/tCiudad/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Ciudades"/>
+        <h:link outcome="/tCiudad/List" rendered="#{loginBean.perfil == 1 or loginBean.perfil == 2 }" value="Administracion de Ciudades"/>
         <br />
         <br />
-        <h:link outcome="/tBarrio/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Barrios"/>
+        <h:link outcome="/tBarrio/List" rendered="#{loginBean.perfil == 1 or loginBean.perfil == 2 }" value="Administracion de Barrios"/>
         <br />
         <br />
-        <h:link outcome="/tZona/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Zonas"/>
+        <h:link outcome="/tZona/List" rendered="#{loginBean.perfil == 1 or loginBean.perfil == 2 }" value="Administracion de Zonas"/>
         <br />
         <br />
-        <h:link outcome="/tDisponibilidad/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Disponibilidad"/>
+        <h:link outcome="/tDisponibilidad/List" rendered="#{loginBean.perfil == 1 or loginBean.perfil == 2 }" value="Administracion de Disponibilidad"/>
         <br />
         <br />
         <h:link outcome="/tInmueble/List" value="Administracion de Inmuebles"/>
