@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>login</title>
+        <link href="#{appBean.baseUrl}resources/css/login.css" type="text/css" rel="stylesheet"/>
+        <h:outputScript library="primefaces" name="jquery/jquery.js" target="head" />
+    </h:head>
+    <h:body>
+        <div class="container">
+            <p:growl id="growl" showDetail="true" life="3000" />
+            <h:form id="formLogin">
+                <p:panel header="Login" style="width: 360px;">
+                    <h:panelGrid id="loginPanel" columns="2">
+                        <h:outputText value="Usuario:" />
+                        <p:inputText id="username" value="#{loginBean.usuario}" ></p:inputText>
+                        <p:spacer></p:spacer>
+                        <p:message for="username" ></p:message>
+                        <h:outputText value="Contraseña:" />
+                        <p:password id="password" value="#{loginBean.password}"  feedback="false"></p:password>
+                        <p:spacer></p:spacer>
+                        <p:message for="password"></p:message>
+                        <f:facet name="footer">
+                            <p:commandButton id="loginButton" value="Login" update=":growl" 
+                                             actionListener="#{loginBean.login(event)}"
+                                             oncomplete="handleLoginRequest(xhr, status, args)" />
+                        </f:facet>         
+                    </h:panelGrid>
+                </p:panel>
+            </h:form>
+        </div>
+        <script type="text/javascript">
+            function handleLoginRequest(xhr, status, args) {
+                if (args.validationFailed || !args.loggedIn) {
+                    jquery('#formLogin').effect("shake", {times: 3}, 100);
+                } else {
+                    location.href = args.ruta;
+                }
+            }
+        </script>
+    </h:body> 
+</html>
