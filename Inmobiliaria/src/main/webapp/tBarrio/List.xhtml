@@ -46,7 +46,7 @@
                             <h:outputText value=" "/>
                             <h:commandLink action="#{tBarrioController.prepareEdit}" value="#{bundle.ListTBarrioEditLink}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{tBarrioController.destroy}" value="#{bundle.ListTBarrioDestroyLink}"/>
+                            <h:commandLink action="#{tBarrioController.destroy}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTBarrioDestroyLink}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

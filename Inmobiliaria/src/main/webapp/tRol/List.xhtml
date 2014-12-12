@@ -40,7 +40,7 @@
                             <h:outputText value=" "/>
                             <h:commandLink action="#{tRolController.prepareEdit}" value="#{bundle.ListTRolEditLink}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{tRolController.destroy}" value="#{bundle.ListTRolDestroyLink}"/>
+                            <h:commandLink action="#{tRolController.destroy}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTRolDestroyLink}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

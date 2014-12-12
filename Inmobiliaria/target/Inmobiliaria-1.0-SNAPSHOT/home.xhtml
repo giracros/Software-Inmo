@@ -7,38 +7,36 @@
         <h:outputStylesheet name="css/jsfcrud.css"/>
     </h:head>
     <h:body>
-       Bienvenido a nuestro portal aquì podra encontrar la informacion que necesita sobre el inmueble que usted esta buscando...
-       
-        <br/>
-        <p>Perfil: #{loginBean.perfil}</p>
-       <c:if test="#{loginBean.perfil == 1}">
-           
-       <p>Perfil: #{loginBean.perfil}</p>
-       
-       <h:link outcome="/tDepartamento/List" value="Administracion de Departamentos"/>
-            <br />
-       <h:link outcome="/tCiudad/List" value="Administracion de Ciudades"/>
-            <br />
-       <h:link outcome="/tBarrio/List" value="Administracion de Barrios"/>
-            <br />
-       <h:link outcome="/tZona/List" value="Administracion de Zonas"/>
-            <br />
-       </c:if>
+        Bienvenido a nuestro portal aquì podra encontrar la informacion que necesita sobre el inmueble que usted esta buscando...
+        <br />
+        <br />
+        <h:link outcome="/tDepartamento/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Departamentos"/>
+        <br />
+        <br />
+        <h:link outcome="/tCiudad/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Ciudades"/>
+        <br />
+        <br />
+        <h:link outcome="/tBarrio/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Barrios"/>
+        <br />
+        <br />
+        <h:link outcome="/tZona/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Zonas"/>
+        <br />
+        <br />
         <h:link outcome="/tDisponibilidad/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Disponibilidad"/>
         <br />
-           <br />
+        <br />
         <h:link outcome="/tInmueble/List" value="Administracion de Inmuebles"/>
         <br />
-           <br />
-        <h:link outcome="/tTipoinmueble/List" value="Administracion de tipo de Inmuebles"/>
         <br />
-           <br />
-        <h:link outcome="/tRol/List" value="Administracion de Roles"/>
+        <h:link outcome="/tTipoinmueble/List" rendered="#{loginBean.perfil == 1 or loginBean.perfil == 2 }" value="Administracion de tipo de Inmuebles"/>
+        <br />
+        <br />
+        <h:link outcome="/tRol/List" rendered="#{loginBean.perfil == 1}" value="Administracion de Roles"/>
         <br/>
-           <br />
-        <h:link outcome="/tUsuarios/List" value="Administrador de Usuarios"/>
         <br />
-           <br />
+        <h:link outcome="/tUsuarios/List" rendered="#{loginBean.perfil == 1 or loginBean.perfil == 2 }" value="Administrador de Usuarios"/>
+        <br />
+        <br />
     </h:body>
 </html>
 

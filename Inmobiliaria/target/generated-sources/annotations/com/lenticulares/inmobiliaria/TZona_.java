@@ -7,7 +7,7 @@ import javax.persistence.metamodel.CollectionAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2014-12-10T21:00:29")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2014-12-12T02:29:51")
 @StaticMetamodel(TZona.class)
 public class TZona_ { 
 

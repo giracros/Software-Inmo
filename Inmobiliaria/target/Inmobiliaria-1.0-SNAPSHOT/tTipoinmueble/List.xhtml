@@ -40,7 +40,7 @@
                             <h:outputText value=" "/>
                             <h:commandLink action="#{tTipoinmuebleController.prepareEdit}" value="#{bundle.ListTTipoinmuebleEditLink}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{tTipoinmuebleController.destroy}" value="#{bundle.ListTTipoinmuebleDestroyLink}"/>
+                            <h:commandLink action="#{tTipoinmuebleController.destroy}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTTipoinmuebleDestroyLink}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

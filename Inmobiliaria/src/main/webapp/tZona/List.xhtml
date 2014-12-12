@@ -46,7 +46,7 @@
                             <h:outputText value=" "/>
                             <h:commandLink action="#{tZonaController.prepareEdit}" value="#{bundle.ListTZonaEditLink}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{tZonaController.destroy}" value="#{bundle.ListTZonaDestroyLink}"/>
+                            <h:commandLink action="#{tZonaController.destroy}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTZonaDestroyLink}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

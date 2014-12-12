@@ -40,7 +40,7 @@
                             <h:outputText value=" "/>
                             <h:commandLink action="#{tDisponibilidadController.prepareEdit}" value="#{bundle.ListTDisponibilidadEditLink}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{tDisponibilidadController.destroy}" value="#{bundle.ListTDisponibilidadDestroyLink}"/>
+                            <h:commandLink action="#{tDisponibilidadController.destroy}" rendered="#{loginBean.perfil == 1}" value="#{bundle.ListTDisponibilidadDestroyLink}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
