@@ -10,7 +10,7 @@ import util.MyUtil;
 
 /**
  *
- * @author Cristian
+ * @author Daniel Fuentes
  */
 @ManagedBean
 @ApplicationScoped

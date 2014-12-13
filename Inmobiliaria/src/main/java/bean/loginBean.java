@@ -17,7 +17,7 @@ import util.MyUtil;
 
 /**
  *
- * @author Cristian
+ * @author Daniel Fuentes
  */
 @Named(value = "loginBean")
 @SessionScoped

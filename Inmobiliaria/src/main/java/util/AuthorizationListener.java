@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Cristian
+ * @author Daniel Fuentes
  */
 public class AuthorizationListener implements PhaseListener{
 
@@ -21,7 +21,7 @@ public class AuthorizationListener implements PhaseListener{
     public void afterPhase(PhaseEvent event) {
         FacesContext facesContext = event.getFacesContext();
         String currentPage = facesContext.getViewRoot().getViewId();
-        boolean isLoginPage = (currentPage.lastIndexOf("login.xhtml") > -1) ? true : false;
+        boolean isLoginPage = (currentPage.lastIndexOf("login.xhtml") > -1);
         HttpSession session =  (HttpSession) facesContext.getExternalContext().getSession(true);
         Object empleado =  session.getAttribute("empleado");
         if (isLoginPage && empleado == null){
